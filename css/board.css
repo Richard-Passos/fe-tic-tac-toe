@@ -1,0 +1,96 @@
+#board {
+  display: grid;
+  grid-template-areas: 
+  "block1 block2 block3"
+  "block4 block5 block6"
+  "block7 block8 block9"
+  ;
+  position: relative;
+}
+
+/* Bloquear antes de cadastrar */
+#blocked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: not-allowed;
+}
+
+/* Blocos dentro do board */
+.blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20vw;
+  height: 20vw;
+  max-width: 15rem;
+  max-height: 15rem;
+
+  color: #fff;
+  font-size: 10em;
+}
+.blocks:hover {
+  cursor: pointer;
+  background-color: #55ffff;
+}
+
+#block5 {
+  border: 10px solid #fff;
+  animation: block5 1.5s ease;
+}
+@keyframes block5 {
+  0% {
+    border: 1px solid #fff;
+  }
+  100% {
+    border: 10px solid #fff;
+  }
+}
+
+#block4, #block6 {
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+  animation: block4-6 1.5s ease;
+}
+@keyframes block4-6 {
+  0% {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  100% {
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+  }
+}
+
+#block2, #block8 {
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  animation: block2-8 1.5s ease;
+}
+@keyframes block2-8 {
+  0% {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  100% {
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+  }
+}
+
+/* Classe para os blocos vencedores */
+.sequenceWinner {
+  border-color: #029602;
+  background-color: #ddd;
+}
+
+/* Medias Q */
+@media (max-width: 600px) {
+  .blocks {
+    font-size: 5rem;
+  }
+}

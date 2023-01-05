@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha (tic-tac-toe)</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/board.css">
+
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="sectionForm">
+        <form action="" id="form">
+          <div class="inputRow">
+            <label for="player1Name">Nome do jogador 1: </label>
+            <input type="text" id="player1Name" name="player1Name" maxlength="20">
+          </div>
+
+          <div class="inputRow">
+            <label for="player2Name">Nome do jogador 2: </label>
+            <input type="text" id="player2Name" name="player2Name" maxlength="20">
+          </div>
+
+          <input type="submit" id="btnSubmit" value="Jogar">
+        </form>
+      </section>
+
+      <section class="sectionTexts">
+        <h1 class="title">Jogo da Velha (tic-tac-toe)</h1>
+
+        <p>Jogador da vez: <span id="playerToPlay"></span></p>
+      </section>
+    </header>
+
+    <main id="board">
+      <div id="blocked"></div>
+      <p class="blocks" id="block1"></p>
+      <p class="blocks" id="block2"></p>
+      <p class="blocks" id="block3"></p>
+      <p class="blocks" id="block4"></p>
+      <p class="blocks" id="block5"></p>
+      <p class="blocks" id="block6"></p>
+      <p class="blocks" id="block7"></p>
+      <p class="blocks" id="block8"></p>
+      <p class="blocks" id="block9"></p>
+    </main>
+
+    <section id="sectionWinner">
+      <p id="winner"></p>
+
+      <button id="btnRestart">Reiniciar</button>
+    </section>
+  </body>
+</html>
