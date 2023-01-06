@@ -3,19 +3,11 @@ const form = document.getElementById("form");
 const boardBlocks = document.querySelectorAll(".blocks");
 
 /* variávies para os jogadores */
-const playerTurn = document.getElementById("playerToPlay");
 let player1;
 let player2;
 
 /* Seção para anunciar o ganhador */
 const sectionWinner = document.getElementById("sectionWinner");
-
-/* Botão para iniciar o jogo */
-const btnSubmit = form.querySelector("#btnSubmit");
-btnSubmit.addEventListener("click", startGame);
-
-/* Turno atual */
-let turn = "X";
 
 /* Combinações para a vitória */
 const winningCombinations = [
@@ -28,6 +20,17 @@ const winningCombinations = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+/* Combinação verncedora */
+let winnerCombination;
+
+/* Botão para iniciar o jogo */
+const btnSubmit = form.querySelector("#btnSubmit");
+btnSubmit.addEventListener("click", startGame);
+
+/* Turno atual */
+const playerTurn = document.getElementById("playerToPlay");
+let turn = "X";
 
 
 function startGame(ev = "") {
@@ -65,6 +68,7 @@ function handleClick(ev) {
   const isWin = checkForWin();
   const isDraw = checkForDraw();
   if(isWin) {
+    showWinnerCombination();
     endGame()
   } else if (isDraw) {
     endGame(true)
@@ -76,10 +80,17 @@ function handleClick(ev) {
 
 function checkForWin() {
   return winningCombinations.some((combination) => {
-    return combination.every((i) => {
+    const checkingCombinations = combination.every((i) => {
       return boardBlocks[i].innerText == turn;
     });
+
+    if(checkingCombinations) {
+      winnerCombination = combination
+    }
+
+    return checkingCombinations;
   });
+
 }
 
 function checkForDraw() {
@@ -112,5 +123,15 @@ btnRestart.addEventListener("click", () => {
   turn = "X"
   playerTurn.innerText = player1
 
+  boardBlocks.forEach(block => {
+    block.classList.remove("sequenceWinner");
+  })
+
   startGame()
 })
+
+function showWinnerCombination() {
+  winnerCombination.forEach((i) => {
+    boardBlocks[i].classList.add("sequenceWinner");
+  });
+}
