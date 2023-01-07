@@ -32,20 +32,20 @@ header {
   border-radius: 0.5rem;
 }
 .inputRow input:hover {
-  background-color: #ddd;
+  background-color: #dadada;
 }
 
 #btnSubmit {
-  padding: 0.4rem;
-  background-color: #fff;
+  padding: 0.5rem;
+  background-color: #fafafa;
   border-radius: 0.5rem;
 }
 #btnSubmit:hover {
   cursor: pointer;
-  background-color: #ddd;
+  background-color: #dadada;
 }
 
-/* Textos header */
+/* Texts header */
 .sectionTexts {
   display: flex;
   flex-flow: column nowrap;

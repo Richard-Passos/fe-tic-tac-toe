@@ -8,7 +8,7 @@
   position: relative;
 }
 
-/* Bloquear antes de cadastrar */
+/* Block before cad */
 #blocked {
   position: absolute;
   top: 0;
@@ -18,7 +18,7 @@
   cursor: not-allowed;
 }
 
-/* Blocos dentro do board */
+/* Board blocks */
 .blocks {
   display: flex;
   justify-content: center;
@@ -34,9 +34,24 @@
 }
 .blocks:hover {
   cursor: pointer;
-  background-color: #55ffff;
+  background-color: rgb(107, 225, 202);
 }
 
+/* Add border */
+#block1 {
+  border-radius: 1rem 0 0 0
+}
+#block3 {
+  border-radius: 0 1rem 0 0
+}
+#block7 {
+  border-radius: 0 0 0 1rem;
+}
+#block9 {
+  border-radius: 0 0 1rem 0;
+}
+
+/* Add animation */
 #block5 {
   border: 10px solid #fff;
   animation: block5 1.5s ease;
@@ -82,9 +97,9 @@
   }
 }
 
-/* Classe para os blocos vencedores */
+/* Class to winner sequence */
 .sequenceWinner {
-  background-color: #029602;
+  background-color: rgba(5, 180, 8, .6);
 }
 
 /* Medias Q */
