@@ -3,6 +3,7 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
+  max-width: 150rem;
   position: relative;
   margin: 2rem;
 }

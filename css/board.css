@@ -53,7 +53,7 @@
 
 /* Add animation */
 #block5 {
-  border: 10px solid #fff;
+  border: 2rem solid #fff;
   animation: block5 1.5s ease;
 }
 @keyframes block5 {
@@ -61,13 +61,13 @@
     border: 1px solid #fff;
   }
   100% {
-    border: 10px solid #fff;
+    border: 2rem solid #fff;
   }
 }
 
 #block4, #block6 {
-  border-top: 10px solid #fff;
-  border-bottom: 10px solid #fff;
+  border-top: 2rem solid #fff;
+  border-bottom: 2rem solid #fff;
   animation: block4-6 1.5s ease;
 }
 @keyframes block4-6 {
@@ -76,14 +76,14 @@
     border-bottom: 1px solid #fff;
   }
   100% {
-    border-top: 10px solid #fff;
-    border-bottom: 10px solid #fff;
+    border-top: 2rem solid #fff;
+    border-bottom: 2rem solid #fff;
   }
 }
 
 #block2, #block8 {
-  border-left: 10px solid #fff;
-  border-right: 10px solid #fff;
+  border-left: 2rem solid #fff;
+  border-right: 2rem solid #fff;
   animation: block2-8 1.5s ease;
 }
 @keyframes block2-8 {
@@ -92,8 +92,8 @@
     border-right: 1px solid #fff;
   }
   100% {
-    border-left: 10px solid #fff;
-    border-right: 10px solid #fff;
+    border-left: 2rem solid #fff;
+    border-right: 2rem solid #fff;
   }
 }
 
@@ -103,6 +103,52 @@
 }
 
 /* Medias Q */
+@media (max-width: 600px) {
+  #block5 {
+    border: 1rem solid #fff;
+    animation: block5 1.5s ease;
+  }
+  @keyframes block5 {
+    0% {
+      border: 1px solid #fff;
+    }
+    100% {
+      border: 1rem solid #fff;
+    }
+  }
+
+  #block4, #block6 {
+    border-top: 1rem solid #fff;
+    border-bottom: 1rem solid #fff;
+    animation: block4-6 1.5s ease;
+  }
+  @keyframes block4-6 {
+    0% {
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+    100% {
+      border-top: 1rem solid #fff;
+      border-bottom: 1rem solid #fff;
+    }
+  }
+
+  #block2, #block8 {
+    border-left: 1rem solid #fff;
+    border-right: 1rem solid #fff;
+    animation: block2-8 1.5s ease;
+  }
+  @keyframes block2-8 {
+    0% {
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+    }
+    100% {
+      border-left: 1rem solid #fff;
+      border-right: 1rem solid #fff;
+    }
+  }
+}
 @media (max-width: 600px) {
   .blocks {
     font-size: 5rem;
