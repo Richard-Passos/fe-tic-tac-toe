@@ -11,7 +11,7 @@ Desafio OneBitCode para fazer um Jogo da Velha com um Form
 ## :rocket: Rodando o projeto
 Para rodar o repositório é recomendado acessar:
 ```
-https://richard-passos.github.io/ToDo_List_Challenge/loginPage.html
+https://richard-passos.github.io/tic-tac-toe_challenge/
 ```
 
 ## :handshake: Colaboradores
