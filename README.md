@@ -1,4 +1,4 @@
-<h1 align="center">:file_cabinet: Todo List</h1>
+<h1 align="center">:file_cabinet: Tic-tac-toet</h1>
 
 ## :memo: Descrição
 Desafio OneBitCode para fazer um Jogo da Velha com um Form
