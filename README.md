@@ -16,7 +16,7 @@ Website with the tic tac toe game and a form to sign up the players.
 
 ## :rocket: Run project
 ```
-https://project-url.com
+https://richard-passos.github.io/fe-tic-tac-toe/
 ```
 
 <br>
